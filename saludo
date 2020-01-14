@@ -1,0 +1,12 @@
+class Saludo {
+    constructor(startName) {
+        this.value = startName
+    }
+
+    hi() {
+        this.value = ('Hola  ') + this.value
+    }
+}
+
+const saludar = new Saludo('astrid')
+
