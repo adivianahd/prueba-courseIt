@@ -1,12 +1,14 @@
-class Saludo {
+class Hello {
     constructor(startName) {
         this.value = startName
     }
 
     hi() {
         this.value = ('Hola  ') + this.value
+        return this.value
     }
 }
 
-const saludar = new Saludo('astrid')
+const hello = new Hello('astrid')
 
+console.log(hello.hi())
