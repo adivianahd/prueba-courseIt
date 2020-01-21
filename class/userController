@@ -1,0 +1,43 @@
+class UserController {
+    constructor() {
+        this.users = [
+            {
+                id: "juani",
+                name: "Juan Gallo",
+                age: 26
+            },
+            {
+                id: "dami",
+                name: "Damian Catanzaro",
+                age: 24
+            },
+            {
+                id: "courseit",
+                name: "CourseIt",
+                age: 1
+            },
+            {
+                id: "juani",
+                name: "Juan Gallo"
+            },
+            {
+                id: "dami",
+                name: "Damian Catanzaro"
+            }
+        ]
+    }
+
+    getUsers(req, res) {
+        return res.json(this.users)
+    }
+
+    getUserByName(req, res) {
+        const nombre = req.params.nombre
+        this.users.map((elem, index) => {
+            if (nombre == elem.name) {
+                return res.json(elem)
+            }
+        })
+    }
+}
+module.exports = UserController;
